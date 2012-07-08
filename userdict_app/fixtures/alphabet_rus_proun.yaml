@@ -1,0 +1,832 @@
+- fields: {description: null, letter: "\u3042", letter_type: HR, pronunciation: "\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 1
+- fields: {description: null, letter: "\u3044", letter_type: HR, pronunciation: "\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 2
+- fields: {description: null, letter: "\u3046", letter_type: HR, pronunciation: "\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 3
+- fields: {description: null, letter: "\u3048", letter_type: HR, pronunciation: "\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 4
+- fields: {description: null, letter: "\u304A", letter_type: HR, pronunciation: "\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 5
+- fields: {description: null, letter: "\u304B", letter_type: HR, pronunciation: "\u041A\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 6
+- fields: {description: null, letter: "\u304C", letter_type: HR, pronunciation: "\u0413\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 14
+- fields: {description: null, letter: "\u304D", letter_type: HR, pronunciation: "\u041A\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 7
+- fields: {description: null, letter: "\u304D\u3083", letter_type: HR, pronunciation: "\u041A\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 11
+- fields: {description: null, letter: "\u304D\u3085", letter_type: HR, pronunciation: "\u041A\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 12
+- fields: {description: null, letter: "\u304D\u3087", letter_type: HR, pronunciation: "\u041A\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 13
+- fields: {description: null, letter: "\u304E", letter_type: HR, pronunciation: "\u0413\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 15
+- fields: {description: null, letter: "\u304E\u3083", letter_type: HR, pronunciation: "\u0413\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 19
+- fields: {description: null, letter: "\u304E\u3085", letter_type: HR, pronunciation: "\u0413\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 20
+- fields: {description: null, letter: "\u304E\u3087", letter_type: HR, pronunciation: "\u0413\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 21
+- fields: {description: null, letter: "\u304F", letter_type: HR, pronunciation: "\u041A\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 8
+- fields: {description: null, letter: "\u3050", letter_type: HR, pronunciation: "\u0413\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 16
+- fields: {description: null, letter: "\u3051", letter_type: HR, pronunciation: "\u041A\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 9
+- fields: {description: null, letter: "\u3052", letter_type: HR, pronunciation: "\u0413\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 17
+- fields: {description: null, letter: "\u3053", letter_type: HR, pronunciation: "\u041A\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 10
+- fields: {description: null, letter: "\u3054", letter_type: HR, pronunciation: "\u0413\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 18
+- fields: {description: null, letter: "\u3055", letter_type: HR, pronunciation: "\u0421\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 22
+- fields: {description: null, letter: "\u3056", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u0410", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 30
+- fields: {description: null, letter: "\u3057", letter_type: HR, pronunciation: "\u0421\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 23
+- fields: {description: null, letter: "\u3057\u3083", letter_type: HR, pronunciation: "\u0421\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 27
+- fields: {description: null, letter: "\u3057\u3085", letter_type: HR, pronunciation: "\u0421\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 28
+- fields: {description: null, letter: "\u3057\u3087", letter_type: HR, pronunciation: "\u0421\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 29
+- fields: {description: null, letter: "\u3058", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u0418", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 31
+- fields: {description: null, letter: "\u3058\u3083", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u042F", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 35
+- fields: {description: null, letter: "\u3058\u3085", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u042E", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 36
+- fields: {description: null, letter: "\u3058\u3087", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u0401", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 37
+- fields: {description: null, letter: "\u3059", letter_type: HR, pronunciation: "\u0421\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 24
+- fields: {description: null, letter: "\u305A", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u0423", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 32
+- fields: {description: null, letter: "\u305B", letter_type: HR, pronunciation: "\u0421\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 25
+- fields: {description: null, letter: "\u305C", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u042D", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 33
+- fields: {description: null, letter: "\u305D", letter_type: HR, pronunciation: "\u0421\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 26
+- fields: {description: null, letter: "\u305E", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u041E", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 34
+- fields: {description: null, letter: "\u305F", letter_type: HR, pronunciation: "\u0422\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 38
+- fields: {description: null, letter: "\u3060", letter_type: HR, pronunciation: "\u0414\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 46
+- fields: {description: null, letter: "\u3061", letter_type: HR, pronunciation: "\u0427\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 39
+- fields: {description: null, letter: "\u3061\u3083", letter_type: HR, pronunciation: "\u0422\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 43
+- fields: {description: null, letter: "\u3061\u3085", letter_type: HR, pronunciation: "\u0422\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 44
+- fields: {description: null, letter: "\u3061\u3087", letter_type: HR, pronunciation: "\u0422\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 45
+- fields: {description: null, letter: "\u3062", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u0418", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 47
+- fields: {description: null, letter: "\u3064", letter_type: HR, pronunciation: "\u0426\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 40
+- fields: {description: null, letter: "\u3065", letter_type: HR, pronunciation: "\u0414\u0417\
+      \u0423", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 48
+- fields: {description: null, letter: "\u3066", letter_type: HR, pronunciation: "\u0422\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 41
+- fields: {description: null, letter: "\u3067", letter_type: HR, pronunciation: "\u0414\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 49
+- fields: {description: null, letter: "\u3068", letter_type: HR, pronunciation: "\u0422\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 42
+- fields: {description: null, letter: "\u3069", letter_type: HR, pronunciation: "\u0414\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 50
+- fields: {description: null, letter: "\u306A", letter_type: HR, pronunciation: "\u041D\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 51
+- fields: {description: null, letter: "\u306B", letter_type: HR, pronunciation: "\u041D\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 52
+- fields: {description: null, letter: "\u306B\u3083", letter_type: HR, pronunciation: "\u041D\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 56
+- fields: {description: null, letter: "\u306B\u3085", letter_type: HR, pronunciation: "\u041D\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 57
+- fields: {description: null, letter: "\u306B\u3087", letter_type: HR, pronunciation: "\u041D\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 58
+- fields: {description: null, letter: "\u306C", letter_type: HR, pronunciation: "\u041D\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 53
+- fields: {description: null, letter: "\u306D", letter_type: HR, pronunciation: "\u041D\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 54
+- fields: {description: null, letter: "\u306E", letter_type: HR, pronunciation: "\u041D\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 55
+- fields: {description: null, letter: "\u306F", letter_type: HR, pronunciation: "\u0425\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 59
+- fields: {description: null, letter: "\u3070", letter_type: HR, pronunciation: "\u0411\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 67
+- fields: {description: null, letter: "\u3071", letter_type: HR, pronunciation: "\u041F\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 75
+- fields: {description: null, letter: "\u3072", letter_type: HR, pronunciation: "\u0425\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 60
+- fields: {description: null, letter: "\u3072\u3083", letter_type: HR, pronunciation: "\u0425\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 64
+- fields: {description: null, letter: "\u3072\u3085", letter_type: HR, pronunciation: "\u0425\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 65
+- fields: {description: null, letter: "\u3072\u3087", letter_type: HR, pronunciation: "\u0425\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 66
+- fields: {description: null, letter: "\u3073", letter_type: HR, pronunciation: "\u0411\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 68
+- fields: {description: null, letter: "\u3073\u3083", letter_type: HR, pronunciation: "\u0411\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 72
+- fields: {description: null, letter: "\u3073\u3085", letter_type: HR, pronunciation: "\u0411\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 73
+- fields: {description: null, letter: "\u3073\u3087", letter_type: HR, pronunciation: "\u0411\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 74
+- fields: {description: null, letter: "\u3074", letter_type: HR, pronunciation: "\u041F\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 76
+- fields: {description: null, letter: "\u3074\u3083", letter_type: HR, pronunciation: "\u041F\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 80
+- fields: {description: null, letter: "\u3074\u3085", letter_type: HR, pronunciation: "\u041F\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 81
+- fields: {description: null, letter: "\u3074\u3087", letter_type: HR, pronunciation: "\u041F\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 82
+- fields: {description: null, letter: "\u3075", letter_type: HR, pronunciation: "\u0424\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 61
+- fields: {description: null, letter: "\u3076", letter_type: HR, pronunciation: "\u0411\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 69
+- fields: {description: null, letter: "\u3077", letter_type: HR, pronunciation: "\u041F\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 77
+- fields: {description: null, letter: "\u3078", letter_type: HR, pronunciation: "\u0425\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 62
+- fields: {description: null, letter: "\u3079", letter_type: HR, pronunciation: "\u0411\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 70
+- fields: {description: null, letter: "\u307A", letter_type: HR, pronunciation: "\u041F\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 78
+- fields: {description: null, letter: "\u307B", letter_type: HR, pronunciation: "\u0425\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 63
+- fields: {description: null, letter: "\u307C", letter_type: HR, pronunciation: "\u0411\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 71
+- fields: {description: null, letter: "\u307D", letter_type: HR, pronunciation: "\u041F\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 79
+- fields: {description: null, letter: "\u307E", letter_type: HR, pronunciation: "\u041C\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 83
+- fields: {description: null, letter: "\u307F", letter_type: HR, pronunciation: "\u041C\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 84
+- fields: {description: null, letter: "\u307F\u3083", letter_type: HR, pronunciation: "\u041C\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 88
+- fields: {description: null, letter: "\u307F\u3085", letter_type: HR, pronunciation: "\u041C\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 89
+- fields: {description: null, letter: "\u307F\u3087", letter_type: HR, pronunciation: "\u041C\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 90
+- fields: {description: null, letter: "\u3080", letter_type: HR, pronunciation: "\u041C\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 85
+- fields: {description: null, letter: "\u3081", letter_type: HR, pronunciation: "\u041C\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 86
+- fields: {description: null, letter: "\u3082", letter_type: HR, pronunciation: "\u041C\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 87
+- fields: {description: null, letter: "\u3084", letter_type: HR, pronunciation: "\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 91
+- fields: {description: null, letter: "\u3086", letter_type: HR, pronunciation: "\u042E ",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 92
+- fields: {description: null, letter: "\u3088", letter_type: HR, pronunciation: "\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 93
+- fields: {description: null, letter: "\u3089", letter_type: HR, pronunciation: "\u0420\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 94
+- fields: {description: null, letter: "\u308A", letter_type: HR, pronunciation: "\u0420\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 95
+- fields: {description: null, letter: "\u308A\u3083", letter_type: HR, pronunciation: "\u0420\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 99
+- fields: {description: null, letter: "\u308A\u3085", letter_type: HR, pronunciation: "\u0420\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 100
+- fields: {description: null, letter: "\u308A\u3087", letter_type: HR, pronunciation: "\u0420\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 101
+- fields: {description: null, letter: "\u308B", letter_type: HR, pronunciation: "\u0420\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 96
+- fields: {description: null, letter: "\u308C", letter_type: HR, pronunciation: "\u0420\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 97
+- fields: {description: null, letter: "\u308D", letter_type: HR, pronunciation: "\u0420\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 98
+- fields: {description: null, letter: "\u308F", letter_type: HR, pronunciation: "\u0412\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 102
+- fields: {description: null, letter: "\u3092", letter_type: HR, pronunciation: "\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 103
+- fields: {description: null, letter: "\u3093", letter_type: HR, pronunciation: "\u041D ",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 104
+- fields: {description: null, letter: "\u30A2", letter_type: KT, pronunciation: "\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 105
+- fields: {description: null, letter: "\u30A4", letter_type: KT, pronunciation: "\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 106
+- fields: {description: null, letter: "\u30A6", letter_type: KT, pronunciation: "\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 107
+- fields: {description: null, letter: "\u30A8", letter_type: KT, pronunciation: "\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 108
+- fields: {description: null, letter: "\u30AA", letter_type: KT, pronunciation: "\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 109
+- fields: {description: null, letter: "\u30AB", letter_type: KT, pronunciation: "\u041A\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 110
+- fields: {description: null, letter: "\u30AC", letter_type: KT, pronunciation: "\u0413\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 118
+- fields: {description: null, letter: "\u30AD", letter_type: KT, pronunciation: "\u041A\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 111
+- fields: {description: null, letter: "\u30AD\u30E3", letter_type: KT, pronunciation: "\u041A\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 115
+- fields: {description: null, letter: "\u30AD\u30E5", letter_type: KT, pronunciation: "\u041A\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 116
+- fields: {description: null, letter: "\u30AD\u30E7", letter_type: KT, pronunciation: "\u041A\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 117
+- fields: {description: null, letter: "\u30AE", letter_type: KT, pronunciation: "\u0413\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 119
+- fields: {description: null, letter: "\u30AE\u30E3", letter_type: KT, pronunciation: "\u0413\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 123
+- fields: {description: null, letter: "\u30AE\u30E5", letter_type: KT, pronunciation: "\u0413\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 124
+- fields: {description: null, letter: "\u30AE\u30E7", letter_type: KT, pronunciation: "\u0413\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 125
+- fields: {description: null, letter: "\u30AF", letter_type: KT, pronunciation: "\u041A\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 112
+- fields: {description: null, letter: "\u30B0", letter_type: KT, pronunciation: "\u0413\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 120
+- fields: {description: null, letter: "\u30B1", letter_type: KT, pronunciation: "\u041A\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 113
+- fields: {description: null, letter: "\u30B2", letter_type: KT, pronunciation: "\u0413\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 121
+- fields: {description: null, letter: "\u30B3", letter_type: KT, pronunciation: "\u041A\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 114
+- fields: {description: null, letter: "\u30B4", letter_type: KT, pronunciation: "\u0413\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 122
+- fields: {description: null, letter: "\u30B5", letter_type: KT, pronunciation: "\u0421\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 126
+- fields: {description: null, letter: "\u30B6", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u0410", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 134
+- fields: {description: null, letter: "\u30B7", letter_type: KT, pronunciation: "\u0421\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 127
+- fields: {description: null, letter: "\u30B7\u30E3", letter_type: KT, pronunciation: "\u0421\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 131
+- fields: {description: null, letter: "\u30B7\u30E5", letter_type: KT, pronunciation: "\u0421\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 132
+- fields: {description: null, letter: "\u30B7\u30E7", letter_type: KT, pronunciation: "\u0421\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 133
+- fields: {description: null, letter: "\u30B8", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u0418", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 135
+- fields: {description: null, letter: "\u30B8\u30E3", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u042F", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 139
+- fields: {description: null, letter: "\u30B8\u30E5", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u042E", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 140
+- fields: {description: null, letter: "\u30B8\u30E7", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u0401", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 141
+- fields: {description: null, letter: "\u30B9", letter_type: KT, pronunciation: "\u0421\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 128
+- fields: {description: null, letter: "\u30BA", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u0423", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 136
+- fields: {description: null, letter: "\u30BB", letter_type: KT, pronunciation: "\u0421\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 129
+- fields: {description: null, letter: "\u30BC", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u042D", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 137
+- fields: {description: null, letter: "\u30BD", letter_type: KT, pronunciation: "\u0421\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 130
+- fields: {description: null, letter: "\u30BE", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u041E", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 138
+- fields: {description: null, letter: "\u30BF", letter_type: KT, pronunciation: "\u0422\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 142
+- fields: {description: null, letter: "\u30C0", letter_type: KT, pronunciation: "\u0414\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 150
+- fields: {description: null, letter: "\u30C1", letter_type: KT, pronunciation: "\u0422\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 143
+- fields: {description: null, letter: "\u30C1\u30E3", letter_type: KT, pronunciation: "\u0422\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 147
+- fields: {description: null, letter: "\u30C1\u30E5", letter_type: KT, pronunciation: "\u0422\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 148
+- fields: {description: null, letter: "\u30C1\u30E7", letter_type: KT, pronunciation: "\u0422\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 149
+- fields: {description: null, letter: "\u30C2", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u0418", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 151
+- fields: {description: null, letter: "\u30C4", letter_type: KT, pronunciation: "\u0426\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 144
+- fields: {description: null, letter: "\u30C5", letter_type: KT, pronunciation: "\u0414\u0417\
+      \u0423", spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 152
+- fields: {description: null, letter: "\u30C6", letter_type: KT, pronunciation: "\u0422\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 145
+- fields: {description: null, letter: "\u30C7", letter_type: KT, pronunciation: "\u0414\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 153
+- fields: {description: null, letter: "\u30C8", letter_type: KT, pronunciation: "\u0422\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 146
+- fields: {description: null, letter: "\u30C9", letter_type: KT, pronunciation: "\u0414\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 154
+- fields: {description: null, letter: "\u30CA", letter_type: KT, pronunciation: "\u041D\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 155
+- fields: {description: null, letter: "\u30CB", letter_type: KT, pronunciation: "\u041D\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 156
+- fields: {description: null, letter: "\u30CB\u30E3", letter_type: KT, pronunciation: "\u041D\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 160
+- fields: {description: null, letter: "\u30CB\u30E5", letter_type: KT, pronunciation: "\u041D\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 161
+- fields: {description: null, letter: "\u30CB\u30E7", letter_type: KT, pronunciation: "\u041D\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 162
+- fields: {description: null, letter: "\u30CC", letter_type: KT, pronunciation: "\u041D\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 157
+- fields: {description: null, letter: "\u30CD", letter_type: KT, pronunciation: "\u041D\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 158
+- fields: {description: null, letter: "\u30CE", letter_type: KT, pronunciation: "\u041D\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 159
+- fields: {description: null, letter: "\u30CF", letter_type: KT, pronunciation: "\u0425\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 163
+- fields: {description: null, letter: "\u30D0", letter_type: KT, pronunciation: "\u0411\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 171
+- fields: {description: null, letter: "\u30D1", letter_type: KT, pronunciation: "\u041F\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 179
+- fields: {description: null, letter: "\u30D2", letter_type: KT, pronunciation: "\u0425\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 164
+- fields: {description: null, letter: "\u30D2\u30E3", letter_type: KT, pronunciation: "\u0425\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 168
+- fields: {description: null, letter: "\u30D2\u30E5", letter_type: KT, pronunciation: "\u0425\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 169
+- fields: {description: null, letter: "\u30D2\u30E7", letter_type: KT, pronunciation: "\u0425\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 170
+- fields: {description: null, letter: "\u30D3", letter_type: KT, pronunciation: "\u0411\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 172
+- fields: {description: null, letter: "\u30D3\u30E3", letter_type: KT, pronunciation: "\u0411\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 176
+- fields: {description: null, letter: "\u30D3\u30E5", letter_type: KT, pronunciation: "\u0411\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 177
+- fields: {description: null, letter: "\u30D3\u30E7", letter_type: KT, pronunciation: "\u0411\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 178
+- fields: {description: null, letter: "\u30D4", letter_type: KT, pronunciation: "\u041F\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 180
+- fields: {description: null, letter: "\u30D4\u30E3", letter_type: KT, pronunciation: "\u041F\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 184
+- fields: {description: null, letter: "\u30D4\u30E5", letter_type: KT, pronunciation: "\u041F\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 185
+- fields: {description: null, letter: "\u30D4\u30E7", letter_type: KT, pronunciation: "\u041F\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 186
+- fields: {description: null, letter: "\u30D5", letter_type: KT, pronunciation: "\u0424\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 165
+- fields: {description: null, letter: "\u30D6", letter_type: KT, pronunciation: "\u0411\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 173
+- fields: {description: null, letter: "\u30D7", letter_type: KT, pronunciation: "\u041F\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 181
+- fields: {description: null, letter: "\u30D8", letter_type: KT, pronunciation: "\u0425\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 166
+- fields: {description: null, letter: "\u30D9", letter_type: KT, pronunciation: "\u0411\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 174
+- fields: {description: null, letter: "\u30DA", letter_type: KT, pronunciation: "\u041F\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 182
+- fields: {description: null, letter: "\u30DB", letter_type: KT, pronunciation: "\u0425\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 167
+- fields: {description: null, letter: "\u30DC", letter_type: KT, pronunciation: "\u0411\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 175
+- fields: {description: null, letter: "\u30DD", letter_type: KT, pronunciation: "\u041F\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 183
+- fields: {description: null, letter: "\u30DE", letter_type: KT, pronunciation: "\u041C\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 187
+- fields: {description: null, letter: "\u30DF", letter_type: KT, pronunciation: "\u041C\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 188
+- fields: {description: null, letter: "\u30DF\u30E3", letter_type: KT, pronunciation: "\u041C\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 192
+- fields: {description: null, letter: "\u30DF\u30E5", letter_type: KT, pronunciation: "\u041C\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 193
+- fields: {description: null, letter: "\u30DF\u30E7", letter_type: KT, pronunciation: "\u041C\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 194
+- fields: {description: null, letter: "\u30E0", letter_type: KT, pronunciation: "\u041C\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 189
+- fields: {description: null, letter: "\u30E1", letter_type: KT, pronunciation: "\u041C\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 190
+- fields: {description: null, letter: "\u30E2", letter_type: KT, pronunciation: "\u041C\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 191
+- fields: {description: null, letter: "\u30E4", letter_type: KT, pronunciation: "\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 195
+- fields: {description: null, letter: "\u30E6", letter_type: KT, pronunciation: "\u042E ",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 196
+- fields: {description: null, letter: "\u30E8", letter_type: KT, pronunciation: "\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 197
+- fields: {description: null, letter: "\u30E9", letter_type: KT, pronunciation: "\u0420\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 198
+- fields: {description: null, letter: "\u30EA", letter_type: KT, pronunciation: "\u0420\u0418",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 199
+- fields: {description: null, letter: "\u30EA\u30E3", letter_type: KT, pronunciation: "\u0420\u042F",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 203
+- fields: {description: null, letter: "\u30EA\u30E5", letter_type: KT, pronunciation: "\u0420\u042E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 204
+- fields: {description: null, letter: "\u30EA\u30E7", letter_type: KT, pronunciation: "\u0420\u0401",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 205
+- fields: {description: null, letter: "\u30EB", letter_type: KT, pronunciation: "\u0420\u0423",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 200
+- fields: {description: null, letter: "\u30EC", letter_type: KT, pronunciation: "\u0420\u042D",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 201
+- fields: {description: null, letter: "\u30ED", letter_type: KT, pronunciation: "\u0420\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 202
+- fields: {description: null, letter: "\u30EF", letter_type: KT, pronunciation: "\u0412\u0410",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 206
+- fields: {description: null, letter: "\u30F2", letter_type: KT, pronunciation: "\u041E",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 207
+- fields: {description: null, letter: "\u30F3", letter_type: KT, pronunciation: "\u041D ",
+    spelling: ''}
+  model: userdict_app.alphabetletters
+  pk: 208

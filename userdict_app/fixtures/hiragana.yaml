@@ -1,0 +1,12 @@
+- model: userdict_app.AlphabetLetters
+  pk: 1
+  fields:
+    letter_type: HR
+    letter: ん
+    pronunciation: Н
+- model: userdict_app.AlphabetLetters
+  pk: 2
+  fields:
+    letter_type: HR
+    letter: い
+    pronunciation: И

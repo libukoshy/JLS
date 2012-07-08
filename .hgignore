@@ -1,0 +1,8 @@
+# use glob syntax.
+syntax: glob
+*.save
+*.pyc
+*_DB
+\#*
+.\#*
+*~

@@ -1,0 +1,31 @@
+- model: userdict_app.Hieroglyphs
+  pk: 1
+  fields:
+    hieroglyph: 会
+    key: 9.4
+    meaning: встречаться
+    on_reading: KAI
+    kun_reading: a(u)
+    main_features: 6
+    jlpt_level: 4
+- model: userdict_app.Hieroglyphs
+  pk: 2
+  fields:
+    hieroglyph: 槽
+    key: 75.11
+    meaning: бак
+    on_reading: SOU
+    main_features: 15
+    jlpt_level: 1
+- model: userdict_app.Hieroglyphs
+  pk: 1
+  fields:
+    hieroglyph: 水
+    key: 85.0
+    meaning: вода
+    on_reading: SUI
+    kun_reading: mizu
+    main_features: 4
+    jlpt_level: 4
+    
+    
