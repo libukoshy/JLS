@@ -49,7 +49,7 @@ class Hieroglyphs(models.Model):
         verbose_name_plural = u'Иероглифы'
         
     def __unicode__(self):
-        return "%s (key %s)"%(self.hieroglyph, self.key)
+        return "%2s (%20s)   [%7s]"%(self.hieroglyph, self.meaning, self.key)
     
 
 class Words(models.Model):

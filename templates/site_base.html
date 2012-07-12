@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">-->
+    <link href="http://bootswatch.com/spruce/bootstrap.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+    {% block css_area %}
+    {% endblock %}
+    <title>
+        {% block page_title %}
+            JLS
+        {% endblock %}
+    </title>
+</head>
+<body>
+  {% block menu %}
+
+  {% endblock %}
+
+
+{% block messages %}
+{% if messages %}
+<div class="container">
+<div class="span12">
+  {% for message in messages %}
+    <div class="alert  {% if message.tags %}
+                {% if message.tags == 'success'%} alert-success{% endif %}
+                {% if message.tags == 'info' %} alert-info{% endif %}
+                {% if message.tags == 'error' %} alert-error{% endif %}
+                {% endif %}">
+      <button class="close" data-dismiss="alert">x</button>{{ message }}
+   </div>
+    {% endfor %}
+</div>
+</div>
+{% endif %}
+{% endblock %}
+
+<div class="container">
+<div class="container content">
+{% block content %}
+{% endblock %}
+</div>
+<footer class="footer">
+<hr/>
+<p class="copyright pull-right">© Melevir, 2012</p>
+</footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/static/jquery-1.7.1.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+{% block script_area %}
+{% endblock %}
+
+
+</body>
+</html>
