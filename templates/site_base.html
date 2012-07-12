@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">-->
-    <link href="http://bootswatch.com/spruce/bootstrap.css" rel="stylesheet">
+    <link href="/static/bootstrap/spruse/bootstrap.css" rel="stylesheet">
     <link href="/static/styles.css" rel="stylesheet">
     {% block css_area %}
     {% endblock %}
@@ -16,6 +16,30 @@
 </head>
 <body>
   {% block menu %}
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="{% url mainpage %}">JLS</a>
+      <ul class="nav">
+        <li><a href="{% url kanji_list 1 %}">Каталог иероглифов</a></li>
+
+        {% if request.user.is_superuser %}
+          <li><a href="/admin/">Админка</a></li>
+        {% endif %}
+
+      </ul>
+      <ul class="nav pull-right">       
+        <li>
+          {% if request.user.username != "" %}
+            <a href="<!--profile-->">{{ request.user.username }}</a></li><li><a href="{% url logout %}">Выйти</a>
+          {% else %}
+            <a href="{% url login %}">Войти</a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
   {% endblock %}
 
@@ -44,7 +68,6 @@
 {% endblock %}
 </div>
 <footer class="footer">
-<hr/>
 <p class="copyright pull-right">© Melevir, 2012</p>
 </footer>
 </div>

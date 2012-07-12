@@ -1,0 +1,62 @@
+{% extends "site_base.html" %}
+
+{% load bootstrap_pagination %}
+
+{% block content %}
+<div class="span12">
+
+<div id="kanji_actions">
+     <div id="kanji_actions_warpper">
+          <div class="icon_wrapper">
+                <a href="#" ><img src="/static/icons/glyphicons_184_volume_up.png"/></a>
+          </div>
+          <div class="icon_wrapper">
+                <a href="#" ><img src="/static/icons/glyphicons_190_circle_plus.png"/></a>
+          </div>
+     </div>
+</div>
+{% for kanji in kanjis %}
+<div class="span2 kanji_block">
+<div class="kanji">
+{{ kanji.hieroglyph }}
+</div>
+<div class="translation">
+{{ kanji.meaning }}
+</div>
+<div class="kanji_info">
+<span class="kanji_jlpt_level">JLPT:{{ kanji.jlpt_level }}</span>
+<span>{{ kanji.key }}</span>
+<span class="kanji_features">черт: {{kanji.main_features }}</span>
+</div>
+</div>
+{% endfor %}
+{% bootstrap_paginate page_obj url_view_name="kanji_list" range=10 %}
+
+</div>
+{% endblock %}
+
+
+{% block script_area %}
+<script>
+var $kanji_actions = $('#kanji_actions');
+console.log($kanji_actions);
+$('.kanji_block').mouseenter(function(){
+        $(this).find('.kanji_info').show();
+        var pos = $(this).position();
+        $kanji_actions.css({
+                position: "absolute",
+                top: (-5) + "px",
+                left: ($(this).width() - 12) + "px"
+                }).show();
+        console.log(pos);
+        $(this).append($kanji_actions);
+});
+
+$('.kanji_block').mouseleave(function(){
+        $(this).find('.kanji_info').hide();
+        $kanji_actions.hide();
+
+});
+
+</script>
+{% endblock %}

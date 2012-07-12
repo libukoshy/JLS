@@ -1,3 +1,5 @@
 django==1.4
 BeautifulSoup
 pyyaml
+django-widget-tweaks
+django-bootstrap-pagination

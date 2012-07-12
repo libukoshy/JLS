@@ -2,6 +2,7 @@
 
 {% block content %}
 <h1>
-        Добра тебе, %username%!
+        Добра тебе, {{ request.user }}!
 </h1>
+
 {% endblock %}

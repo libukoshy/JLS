@@ -1,0 +1,47 @@
+{% extends "site_base.html" %}
+{% block page_title %}
+    JLS   - Log in
+{% endblock %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+{% if form.errors %}
+<div class="alert alert-error">
+      <button class="close" data-dismiss="alert">x</button>
+      Your username and password didn't match. Please try again.
+</div>
+{% endif %}
+
+<div class="span3 offset4 well login_wrapper">
+<form class="form-horizontal" method="POST" action="{% url login %}">
+      {% csrf_token %}
+  <div class="login_form_field">
+  <div class="login_form_label">
+  {{ form.username.label_tag }}
+  </div>
+  <div>
+  {{ form.username }}
+  </div>
+  </div>
+  <div class="login_form_field">
+  <div class="login_form_label">
+  {{ form.password.label_tag }}
+  </div>
+  <div>
+  {{ form.password }}
+  </div>
+  </div>
+
+  <p>
+    <input type="hidden" name="next" value="{% url mainpage %}">
+  </p>
+
+
+  <p class="submit_button_wrapper">
+  <input class="btn btn-success btn-large" type="submit" value="Войти">
+  </p>
+</form>
+  </div>
+{% endblock %}

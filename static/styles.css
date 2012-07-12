@@ -1,0 +1,83 @@
+.content{
+    margin-bottom: 50px;
+    }
+
+body { 
+    padding-top: 65px; 
+    }
+
+.submit_button_wrapper{
+    text-align: center;
+    margin-top: 50px;
+    }
+
+.kanji_block{
+    min-height: 200px;
+    background-color: #01806F;
+    margin: 5px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    }
+
+.kanji_block:hover{
+    background-color: #EBD90B;
+    }
+
+.kanji_block:hover .translation{
+    color: black;
+    }
+
+div.kanji{
+    display: inline-block;
+    line-height: normal;
+    font-size: 70pt;
+    }
+
+div.translation{
+    margin-top: 30px;
+    font-size: 120%;
+    color: #A2B0A8;
+    }
+
+div.kanji_info{
+    position: absolute;
+    bottom: 5px;
+    margin-left: 5px;
+    min-width: 130px;
+    color: black;
+    font-size: x-small;
+    display:none;
+    }
+
+.kanji_jlpt_level{
+    float: left;
+    }
+
+.kanji_features{
+    float: right;
+    }
+
+#kanji_actions{
+    height: 90px;
+    width: 40px;
+    display: none;
+    background-color: #EBD90B;
+    position: absolute;
+    z-index: 2;
+    margin: 5px;
+    border-radius: 0 10px 10px 0;
+    }
+
+#kanji_actions_wrapper{
+    height: 200px;
+    width: 30px;
+    margin-left: 10px;
+    }
+
+.icon_wrapper{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    }
