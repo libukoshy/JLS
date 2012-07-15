@@ -11,7 +11,12 @@
                 <a href="#" ><img src="/static/icons/glyphicons_184_volume_up.png"/></a>
           </div>
           <div class="icon_wrapper">
-                <a href="#" ><img src="/static/icons/glyphicons_190_circle_plus.png"/></a>
+                <form class="js_add_kanji_to_user_dict" method="POST" action="{% url add_kanji_to_user_dict %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="kanji" value="">
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button class="add_kanji_to_user_dict_button" type="submit" title="Добавить в словарь"><img src="/static/icons/glyphicons_190_circle_plus.png"/></button>
+                </form>          
           </div>
      </div>
 </div>
@@ -48,8 +53,12 @@ $('.kanji_block').mouseenter(function(){
                 top: (-5) + "px",
                 left: ($(this).width() - 12) + "px"
                 }).show();
-        console.log(pos);
         $(this).append($kanji_actions);
+        var kanji = $.trim($(this).find('.kanji').text());
+        var $kanji_add_to_user_dict_input = $kanji_actions.find('.js_add_kanji_to_user_dict').find('input[name$=kanji]');
+        console.log($kanji_add_to_user_dict_input);
+        $kanji_add_to_user_dict_input.val(kanji);
+        console.log($kanji_add_to_user_dict_input.val());
 });
 
 $('.kanji_block').mouseleave(function(){

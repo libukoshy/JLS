@@ -1,0 +1,89 @@
+{% extends "site_base.html" %}
+
+{% block css_area %}
+<link href="/static/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+<span class="tabbable tabs-left span5">
+
+<ul class="nav nav-tabs">
+    <li><a href="#dict_list" data-toggle="tab"><i class="icon-book" title="Весь словарь"></i></a></li>    
+    <li class="active"><a href="#added_list" data-toggle="tab"><i class="icon-plus-sign" title="Недавно добавленные"></i></a></li>
+    <li><a href="#failed_list" data-toggle="tab"><i class="icon-exclamation-sign" title="Невыученные"></i></a></li>
+</ul>
+
+<div class="tab-content profile_dict">
+
+<div id="dict_list" class="tab-pane active kanji_list">
+{% for kanji in dict %}
+<div class="kanji_list_element">
+     <span class = "kanji_hieroglyph">
+       {{ kanji.hieroglyph }}
+     </span>
+     <span class = "kanji_translation">
+       {{ kanji.meaning }}
+       <div class="dict_kanji_actions pull-right">
+            <img src="/static/icons/glyphicons_191_circle_minus.png"/>
+       </div>
+     </span>
+</div>
+{% endfor %}
+</div>
+
+<div id="failed_list" class="tab-pane active kanji_list">
+{% for kanji in failed %}
+<div class="kanji_list_element">
+     <span class = "kanji_hieroglyph">
+       {{ kanji.hieroglyph }}
+     </span>
+     <span class = "kanji_translation">
+       {{ kanji.meaning }}
+     </span>
+</div>     
+{% endfor %}
+</div>     
+
+<div id="added_list" class="tab-pane active kanji_list">
+{% for kanji in added %}
+<div class="kanji_list_element">
+     <span class = "kanji_hieroglyph">
+       {{ kanji.hieroglyph }}
+     </span>
+     <span class = "kanji_translation">
+       {{ kanji.meaning }}
+     </span>
+</div>
+{% endfor %}
+</div>
+
+</div>
+</span>
+
+{% endblock %}
+
+{% block script_area %}
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="/static/jquery.mousewheel.min.js"></script>
+<script src="/static/jquery.mCustomScrollbar.js"></script>
+<script>
+    (function($){
+        $(window).load(function(){
+            $(".kanji_list").mCustomScrollbar();
+        $('a[href="#dict_list"]').click();
+
+        $('.kanji_list_element').mouseenter(function(){
+             $(this).find('.dict_kanji_actions').show();
+        });
+        $('.kanji_list_element').mouseleave(function(){
+             $(this).find('.dict_kanji_actions').hide();
+        });
+
+        
+        });
+    })(jQuery);
+
+</script>
+
+{% endblock %}

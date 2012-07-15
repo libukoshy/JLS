@@ -2935,13 +2935,13 @@ input[type="submit"].btn.btn-mini {
 }
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
-  min-width: 74px;
+/*  min-width: 74px; */
   margin-right: 0;
   margin-bottom: 3px;
 }
 .tabs-left > .nav-tabs {
   float: left;
-  margin-right: 19px;
+/*  margin-right: 19px; */
   border-right: 1px solid #ddd;
 }
 .tabs-left > .nav-tabs > li > a {
@@ -4702,7 +4702,7 @@ div.subnav.subnav-fixed {
 .nav-tabs > .active > a:hover,
 .nav-pills .active > a,
 .nav-pills .active > a:hover {
-  background-color: #A2CDB5;
+  background-color: #01806F;
   border-color: transparent;
   color: #01584c;
 }

@@ -1,6 +1,7 @@
 #coding: utf-8
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 
 class AlphabetLetters(models.Model):
     u'Символ алфавита'
@@ -32,7 +33,7 @@ class Hieroglyphs(models.Model):
                    ('5', 'JLPT - ku 5'),
                    )
 
-    hieroglyph = models.CharField(u'Иероглиф', max_length = 1)
+    hieroglyph = models.CharField(u'Иероглиф', max_length = 1, unique=True)
     key = models.CharField(u'Ключ', max_length=10) 
     meaning = models.CharField(u'Значение', max_length = 50)
     on_reading = models.CharField(u'Онное чтение', max_length=20, null=True, blank=True)
@@ -64,3 +65,64 @@ class Words(models.Model):
         
     def __unicode__(self):
         return "%s [%s] %s"%(self.word, self.reading, self.translation)
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    kanji_list = models.ManyToManyField(Hieroglyphs, verbose_name=u'Словарь пользователя',
+                                        through = 'userdict_app.HieroglyphUserInfo', blank=True)
+
+    class Meta:
+        ordering = ('user',)
+        verbose_name = u'Профиль пользователя'
+        verbose_name_plural = u'Профили пользователей'
+        
+    def __unicode__(self):
+        return u'Профиль пользователя %s'%(self.user.username)
+
+
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+
+post_save.connect(create_user_profile, sender=User)
+
+
+class HieroglyphUserInfo(models.Model):
+
+    FAIL_CHOISES = (('KT','Kanji-Translation'),
+                    ('TK','Translation-Kanji'),
+                   )
+    
+    profile = models.ForeignKey(UserProfile, verbose_name=u'Профиль')
+    hieroglyph = models.ForeignKey(Hieroglyphs, verbose_name=u'Иероглиф')    
+    correct_exp = models.IntegerField(u'Опыт, полученный за правильные попытки распознания иероглифа', default=0)
+    incorrect_exp = models.IntegerField(u'Опыт, не полученный за не правильные попытки распознания иероглифа', default=0)
+    added_timestamp = models.DateTimeField(u'Дата добавления', auto_now_add = True)
+    failed_timestamp = models.DateTimeField(u'Дата последнего нераспознавания', null=True, blank=True)
+    last_fail = models.CharField(u'Тренировка, на которой иероглиф не был распознан',
+                                 max_length = 2, choices = FAIL_CHOISES, null=True, blank=True)
+
+    class Meta:
+        ordering = ('profile', 'hieroglyph',)
+        verbose_name = u'Информация о иероглифе в словаре пользователя'
+        verbose_name_plural = u'Информация о иероглифах в словаре пользователя'
+        
+    def __unicode__(self):
+        return "%20s (%2s) [%10s]"%(self.profile.user.username, self.hieroglyph.hieroglyph, self.status())
+
+    def status(self):
+        u'Метод вычисляет степень знания пользователем данного иероглифа.'
+
+        # Опыт, необходиный для достижения определенной степени знания.
+        # Вынести в общие настройки
+        familiar_info = ((0, 'DONT KNOW'),
+                         (2, 'FAMILIAR'),
+                         (5, 'RECOGNIZE'),
+                         (10, 'KNOW')
+                         )
+        exp = correct_exp - incorrect_exp
+        for lvl in familiar_info:
+            if exp in xrange(lvl[0]):
+                return lvl[1]
+        return familiar_info[-1][1]

@@ -31,7 +31,7 @@
       <ul class="nav pull-right">       
         <li>
           {% if request.user.username != "" %}
-            <a href="<!--profile-->">{{ request.user.username }}</a></li><li><a href="{% url logout %}">Выйти</a>
+            <a href="{% url user_dict %}">{{ request.user.username }}</a></li><li><a href="{% url logout %}">Выйти</a>
           {% else %}
             <a href="{% url login %}">Войти</a>
           {% endif %}

@@ -81,3 +81,63 @@ div.kanji_info{
     width: 30px;
     margin: 5px;
     }
+
+.kanji_list{
+    border-radius: 0 0 10px 10px;
+    background-color: #01806F;
+    height: 600px;
+    overflow: auto;
+    }
+
+.kanji_list_element{
+    border-radius: 3px;
+    background-color: #01806F;
+    margin: 3px;
+    }
+
+.kanji_list_element:hover{
+    background-color: #EBD90B;
+    }
+
+.big_kanji{
+    font-size: 100pt;
+    line-height: normal;
+    margin-left:50px;
+    background-color: #EBD90B;
+    height: 170px;
+    width: 170px;
+    text-align: center;
+    vertical-aling: center;
+    border-radius: 10px;
+    }
+
+.kanji_list_header{
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    background-color: #01806F;
+    }
+
+.add_kanji_to_user_dict_button{
+    display: inline-block;
+    border: none;
+    background: none;
+    margin-left: 0;
+    padding-left: 0;
+    }
+
+.kanji_hieroglyph{
+    font-size: 200%;
+    }
+
+.kanji_translation{
+    color: #A2B0A8;
+    }
+
+.dict_kanji_actions{
+    display: none;
+    margin:: 2px;
+    }
+
+.profile_dict{
+    border-radius: 0 10px 10px 10px;
+    }
