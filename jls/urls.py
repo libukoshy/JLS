@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'userdict_app.views.mainpage', name='mainpage'),
-    url(r'^user/dict/$', 'userdict_app.views.profile_page', name='user_dict'),
+    url(r'^profile/$', 'userdict_app.views.profile_page', name='profile'),
     url(r'^kanji/', include('userdict_app.urls')),
     # admin urls
     url(r'^admin/', include(admin.site.urls)),

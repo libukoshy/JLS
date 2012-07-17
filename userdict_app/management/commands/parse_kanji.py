@@ -1,8 +1,9 @@
 #coding: utf-8
-from userdict_app.models import AlphabetLetters, Hieroglyphs
+from userdict_app.models import AlphabetLetters, Hieroglyphs, HieroglyphReading, HieroglyphKey
 from django.core.management.base import BaseCommand, CommandError
 from BeautifulSoup import BeautifulSoup
 from userdict_app.decode_unicode_references import decode_unicode_references
+from itertools import chain
 import urllib2
 import re
 
@@ -33,20 +34,33 @@ class Command(BaseCommand):
                     image_url = ''.join(('kanjidb.ru',image_url[1:]))
                 else:
                     image_url = ''
-                key = ''.join(kanji_info.findAll(text=u"ключ")[0].parent.parent.parent.parent.findAll(text=True)).split('(')[1].split(')')[0].encode('utf-8') #optimize me!
-                on_reading = '/'.join(kanji_info.findAll(text=u"он")[0].parent.parent.parent.parent.contents[3].contents[0].findAll(text=True)[:-1])
-                kun_reading = '/'.join(kanji_info.findAll(text=u"кун")[0].parent.parent.parent.parent.contents[3].findAll(text=True))
+                key_full = ''.join(kanji_info.findAll(text=u"ключ")[0].parent.parent.parent.parent.findAll(text=True)).encode('utf-8') #optimize me!
+                key_list = map(lambda x: int(x), key_full.split('(')[1].split(')')[0].split('.'))
+                key_id = key_list[0]
+                if len(key_list) > 1:
+                    additional_features_amount = key_list[1]
+                else:
+                    additional_features_amount = 0
+                on_reading = kanji_info.findAll(text=u"он")[0].parent.parent.parent.parent.contents[3].contents[0].findAll(text=True)[:-1]
+                kun_reading = kanji_info.findAll(text=u"кун")[0].parent.parent.parent.parent.contents[3].findAll(text=True)
+                on_reading = filter(lambda r: r not in ('-',''), on_reading)
+                kun_reading = filter(lambda r: r not in ('-',''), kun_reading)                
                 features_amount = int(kanji_info.findAll(text=u"черт")[0].parent.parent.parent.parent.contents[3].contents[0].contents[0])
-                jlpt_level = int(kanji_info.findAll(text=u"уровень")[0].parent.parent.parent.parent.contents[3].findAll(text=True)[1][-2])
+                jlpt_level = kanji_info.findAll(text=u"уровень")[0].parent.parent.parent.parent.contents[3].findAll(text=True)[1][5]
+                on_reading_objects = map(lambda r: HieroglyphReading.objects.get_or_create(reading_type = 'O',
+                                                                                     reading = unicode(r))[0], on_reading)
+                kun_reading_objects = map(lambda r: HieroglyphReading.objects.get_or_create(reading_type = 'O',
+                                                                                     reading = unicode(r))[0], kun_reading)
+                
                 new_kanji = Hieroglyphs.objects.create(
                     hieroglyph = kanji,
-                    key=key,
+                    key=HieroglyphKey.objects.get(number = key_id),
                     meaning = translation,
-                    on_reading = on_reading,
-                    kun_reading = kun_reading,
-                    main_features = features_amount,
+                    additional_features = additional_features_amount,
                     jlpt_level = jlpt_level
                     )
+                map(lambda r: new_kanji.readings.add(r), chain(on_reading_objects,kun_reading_objects))
+                new_kanji.save()
                 totally_added+=1
-                print "%s   [%s]"%(new_kanji, kanji_id)
+                print "%s {%s}"%(new_kanji, kanji_id)
         print "Totally added %s hieroglyphs!"%totally_added

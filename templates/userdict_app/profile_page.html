@@ -16,6 +16,15 @@
 
 <div class="tab-content profile_dict">
 
+<div class="dict_kanji_actions pull-right">
+<form method="POST" action="{% url remove_kanji_from_user_dict %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="kanji" value="">
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button class="submit_no_style" type="submit" title="Удалить из словаря"><img src="/static/icons/glyphicons_191_circle_minus.png"/></button>
+
+</div>
+
 <div id="dict_list" class="tab-pane active kanji_list">
 {% for kanji in dict %}
 <div class="kanji_list_element">
@@ -24,9 +33,6 @@
      </span>
      <span class = "kanji_translation">
        {{ kanji.meaning }}
-       <div class="dict_kanji_actions pull-right">
-            <img src="/static/icons/glyphicons_191_circle_minus.png"/>
-       </div>
      </span>
 </div>
 {% endfor %}
@@ -65,17 +71,29 @@
 
 {% block script_area %}
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>!window.jQuery.ui && document.write(unescape('%3Cscript src="/static/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))</script>
 <script src="/static/jquery.mousewheel.min.js"></script>
 <script src="/static/jquery.mCustomScrollbar.js"></script>
 <script>
+$kanji_actions = $('.dict_kanji_actions');
     (function($){
         $(window).load(function(){
             $(".kanji_list").mCustomScrollbar();
         $('a[href="#dict_list"]').click();
 
         $('.kanji_list_element').mouseenter(function(){
-             $(this).find('.dict_kanji_actions').show();
+            var pos = $(this).position();
+            $kanji_actions.css({
+                    position: "absolute",
+                    top: (pos.top + $(this).height()/2 - $kanji_actions.height()/2 + 5) + "px",
+                    left: ($(this).width() - 27) + "px"
+                    }).show();
+            $(this).append($kanji_actions);
+            var kanji = $.trim($(this).find('.kanji_hieroglyph').text());
+            var $kanji_add_to_user_dict_input = $kanji_actions.find('input[name$=kanji]');
+            $kanji_add_to_user_dict_input.val(kanji);
         });
+
         $('.kanji_list_element').mouseleave(function(){
              $(this).find('.dict_kanji_actions').hide();
         });

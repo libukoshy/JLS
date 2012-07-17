@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
 class AlphabetLetters(models.Model):
-    u'Символ алфавита'
+    u'Символы алфавита'
     
     ALPHABET_CHOISES = (('HR','Hiragana'),('KT','Katakana'))
 
@@ -24,7 +24,8 @@ class AlphabetLetters(models.Model):
 
     
 class Hieroglyphs(models.Model):
-
+    u'Иероглифы'
+    
     JLPT_LEVELS = (('0', u'не входит в программу'),
                    ('1', 'JLPT - ku 1'),
                    ('2', 'JLPT - ku 2'),
@@ -34,11 +35,10 @@ class Hieroglyphs(models.Model):
                    )
 
     hieroglyph = models.CharField(u'Иероглиф', max_length = 1, unique=True)
-    key = models.CharField(u'Ключ', max_length=10) 
+    key = models.ForeignKey('HieroglyphKey', verbose_name=u'Ключ')
     meaning = models.CharField(u'Значение', max_length = 50)
-    on_reading = models.CharField(u'Онное чтение', max_length=20, null=True, blank=True)
-    kun_reading = models.CharField(u'Кунное чтение', max_length=20, null=True, blank=True)
-    main_features = models.IntegerField(u'Количество главных черт')
+    readings = models.ManyToManyField('HieroglyphReading', verbose_name=u'Онные и кунные чтения')
+    additional_features = models.PositiveSmallIntegerField(u'Количество дополнительных черт')
     jlpt_level = models.CharField(u'Уровень экзамена, в программу которого входит иероглиф', max_length=1, choices=JLPT_LEVELS, null=True, blank=True)
     spelling = models.ImageField(u'Написание', upload_to='/hierogliphs/pics/', null=True, blank=True)
     similar_hieroglyphs = models.ManyToManyField('self', verbose_name=u'Похожие иероглифы', symmetrical = False, null=True, blank=True)
@@ -50,10 +50,47 @@ class Hieroglyphs(models.Model):
         verbose_name_plural = u'Иероглифы'
         
     def __unicode__(self):
-        return "%2s (%20s)   [%7s]"%(self.hieroglyph, self.meaning, self.key)
+        return "%2s (%20s)   [%2s]"%(self.hieroglyph, self.meaning, self.key.key)
+
+
+class HieroglyphKey(models.Model):
+    u'Ключи (базовые иероглифы)'
+
+    key = models.CharField(u'Иероглиф', max_length = 1)
+#    meaning = models.CharField(u'Значение', max_length = 50)
+    features_amount = models.PositiveSmallIntegerField(u'Количество черт', null=True, blank=True)
+    number = models.PositiveSmallIntegerField(u'Номер')
+#    readings = models.ManyToManyField('HieroglyphReading', verbose_name=u'Онные и кунные чтения')
+    
+    class Meta:
+        ordering = ('number',)
+        verbose_name = u'Ключ'
+        verbose_name_plural = u'Ключи'
+        
+    def __unicode__(self):
+        return u"%2s [%3s]"%(self.key, self.number)
+    
+
+class HieroglyphReading(models.Model):
+    u'Чтения иероглифов'
+
+    READING_TYPE_CHOICES = (('O','On'), ('K','Kun'))
+    
+    reading_type = models.CharField(u'Тип чтения', max_length = 1, choices = READING_TYPE_CHOICES)
+    reading = models.CharField(u'Произношение', max_length = 30)
+
+    class Meta:
+        ordering = ('reading',)
+        verbose_name = u'Произношениее иероглифа'
+        verbose_name_plural = u'Произношения иероглифов'
+        
+    def __unicode__(self):
+        return '[%s]'%(self.reading)
     
 
 class Words(models.Model):
+    u'Слова'
+    
     word = models.CharField(u'Слово на японском', max_length = 20)
     translation = models.CharField(u'Перевод', max_length = 100)
     reading = models.CharField(u'Произношение', max_length = 40)
@@ -68,10 +105,31 @@ class Words(models.Model):
 
 
 class UserProfile(models.Model):
+    u'Профиль пользователя'
+
+    MAX_LEVEL = 10
+    # Таблица необходимого опыта для каждого уровня
+    LEVELS_TABLE = {
+        1: 50,
+        2: 100,
+        3: 200,
+        4: 300,
+        5: 500,
+        6: 800,
+        7: 1200,
+        8: 1800,
+        9: 2500,
+        10: 3200
+                   }
+    
     user = models.OneToOneField(User)
+    full_name = models.CharField(u'Полное имя', max_length = 50)
+    known_kanjs_amount = models.PositiveSmallIntegerField(u'Количество известных иероглифов', default = 0)    #PositiveSmallIntegerField хватит??
     kanji_list = models.ManyToManyField(Hieroglyphs, verbose_name=u'Словарь пользователя',
                                         through = 'userdict_app.HieroglyphUserInfo', blank=True)
-
+    current_level = models.PositiveSmallIntegerField(u'Текущий уровень опыта', default = 0)
+    current_exp = models.PositiveSmallIntegerField(u'Значение опыта на текущем уровне', default = 0)    #PositiveSmallIntegerField хватит??
+    
     class Meta:
         ordering = ('user',)
         verbose_name = u'Профиль пользователя'
@@ -79,6 +137,15 @@ class UserProfile(models.Model):
         
     def __unicode__(self):
         return u'Профиль пользователя %s'%(self.user.username)
+
+    def add_experiense(self, exp_amount):
+        if self.current_level < UserProfile.MAX_LEVEL:
+            exp_to_levelup = UserProfile.LEVELS_TABLE[self.current_level + 1] - self.current_exp
+            if exp_amount < exp_to_levelup:
+                self.current_exp += exp_amount
+            else:
+                self.current_level += 1
+                self.current_exp = exp_amount - exp_to_levelup
 
 
 def create_user_profile(sender, instance, created, **kwargs):
@@ -89,6 +156,7 @@ post_save.connect(create_user_profile, sender=User)
 
 
 class HieroglyphUserInfo(models.Model):
+    u'Таблица связи иероглифов с профилем пользователя'
 
     FAIL_CHOISES = (('KT','Kanji-Translation'),
                     ('TK','Translation-Kanji'),

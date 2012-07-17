@@ -16,10 +16,12 @@ def kanji_list(request, page):
     kanji_per_page = 24
     page = int(page)
     p = Paginator(Hieroglyphs.objects.all(), kanji_per_page)
+    # TODO проверять количество страниц
     page = p.page(page)
     kanjis = page.object_list
     return render(request, 'userdict_app/kanji_list.html', {'kanjis':kanjis, 'page_obj':page})
 
+@login_required
 def profile_page(request):
     # Количество показываемых "недавних" иероглифов
     # Вынести в настройки
@@ -38,6 +40,17 @@ def add_kanji_to_userdict(request):
         HieroglyphUserInfo.objects.create(profile=request.user.get_profile(),
                                           hieroglyph = Hieroglyphs.objects.get(hieroglyph=request.POST['kanji'])).save()
         messages.success(request, u'Иероглиф добавлен в словарь.')
+        return redirect(request.POST.get('next', reverse('kanji_list', args=[1,])))
+    else:
+        raise Http404                                          
+
+@login_required
+@require_POST
+def remove_kanji_from_userdict(request):
+    if 'kanji' in request.POST:
+        HieroglyphUserInfo.objects.filter(profile=request.user.get_profile(),
+                                          hieroglyph = Hieroglyphs.objects.get(hieroglyph=request.POST['kanji'])).delete()
+        messages.success(request, u'Иероглиф удален.')
         return redirect(request.POST.get('next', reverse('kanji_list', args=[1,])))
     else:
         raise Http404                                          

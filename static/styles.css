@@ -55,7 +55,7 @@ div.kanji_info{
     float: left;
     }
 
-.kanji_features{
+.kanji_key_hieroglyph{
     float: right;
     }
 
@@ -92,11 +92,15 @@ div.kanji_info{
 .kanji_list_element{
     border-radius: 3px;
     background-color: #01806F;
-    margin: 3px;
+    margin: 5px;
     }
 
 .kanji_list_element:hover{
     background-color: #EBD90B;
+    }
+
+.kanji_list_element:hover .kanji_translation{
+    color: #013435;
     }
 
 .big_kanji{
@@ -117,7 +121,7 @@ div.kanji_info{
     background-color: #01806F;
     }
 
-.add_kanji_to_user_dict_button{
+.submit_no_style{
     display: inline-block;
     border: none;
     background: none;
@@ -127,6 +131,7 @@ div.kanji_info{
 
 .kanji_hieroglyph{
     font-size: 200%;
+    line-height: normal;
     }
 
 .kanji_translation{
@@ -135,7 +140,9 @@ div.kanji_info{
 
 .dict_kanji_actions{
     display: none;
-    margin:: 2px;
+    width: 25px;
+    height: 25px;
+    vertical-align: center;
     }
 
 .profile_dict{
