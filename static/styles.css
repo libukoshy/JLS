@@ -21,6 +21,17 @@ body {
     position: relative;
     }
 
+.kanji_block a:link, a:visited, a:active, a:hover{
+    color: #013435;
+    text-decoration: none;
+    outline: 0;
+    }
+
+.kanji_info_link{
+    display: block;
+    height: 200px;
+    }
+
 .kanji_block:hover{
     background-color: #EBD90B;
     }
@@ -147,4 +158,22 @@ div.kanji_info{
 
 .profile_dict{
     border-radius: 0 10px 10px 10px;
+    }
+
+#info_hieroglyph{
+    font-size: 160pt;
+    height: 300px;
+    line-height: normal;
+    text-align: center;
+    }
+
+#info_translation{
+    font-size: 200%;
+    color: #A2B0A8;
+    text-align: center;
+    }
+
+#info_kanji_key_hieroglyph{
+    font-size: 30pt;
+    line-height: normal;
     }

@@ -55,4 +55,10 @@ def remove_kanji_from_userdict(request):
     else:
         raise Http404                                          
 
-    
+def kanji_info(request, kanji):
+    kanji = get_object_or_404(Hieroglyphs, hieroglyph = kanji)
+    on_readings = kanji.readings.filter(reading_type = 'O')
+    kun_readings = kanji.readings.filter(reading_type = 'K')
+    print on_readings
+    print kun_readings
+    return render(request, 'userdict_app/kanji_info.html', {'kanji':kanji, 'on_readings':on_readings, 'kun_readings':kun_readings})

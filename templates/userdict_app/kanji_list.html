@@ -2,7 +2,7 @@
 
 {% load bootstrap_pagination %}
 
-{% block content %}
+v{% block content %}
 <div class="span12">
 
 <div id="kanji_actions">
@@ -22,6 +22,8 @@
 </div>
 {% for kanji in kanjis %}
 <div class="span2 kanji_block">
+<a class="kanji_info_link" href="{% url kanji_info kanji.hieroglyph %}">
+
 <div class="kanji">
 {{ kanji.hieroglyph }}
 </div>
@@ -33,6 +35,8 @@
 <span>{{ kanji.key.number }}.{{ kanji.additional_features }}</span>
 <span class="kanji_key_hieroglyph">ключ: {{kanji.key.key }}</span>
 </div>
+
+</a>
 </div>
 {% endfor %}
 {% bootstrap_paginate page_obj url_view_name="kanji_list" range=10 %}

@@ -1,0 +1,47 @@
+{% extends "site_base.html" %}
+
+{% block content %}
+
+<span id="info_hieroglyph" class="span3 well">
+      {{ kanji.hieroglyph }}
+</span>
+
+<span class="span4">
+      <div id="info_translation" class="well">
+           {{ kanji.meaning }}
+      </div>
+      <div id="info_on_readings" class="well">
+           {% for r in on_readings %}
+              <div>
+                {{ r.reading  }}
+              </div>
+           {% endfor %}
+      </div>
+      <div id="info_kun_readings" class="well">
+           {% for r in kun_readings %}
+              <div>
+                {{ r.reading  }}
+              </div>
+           {% endfor %}
+      </div>
+</span>
+<span class="span4">
+      <div class="well">
+           <span id="info_kanji_key_hieroglyph">
+                {{ kanji.key.key }}
+           </span>
+           <span id="info_kanji_key_number">
+                ({{ kanji.key.number }})
+           </span>
+      </div>
+
+      <div class="well">
+           <div>
+                 <b> Уровень JLPT: </b> {{ kanji.jlpt_level }}
+           </div>
+           <div>
+                 <b> Дополнительных черт: </b> {{ kanji.additional_features }}
+           </div>
+      </div>
+</span>
+{% endblock %}
