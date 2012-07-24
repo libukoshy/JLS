@@ -8,9 +8,16 @@
 
 <span class="span4">
       <div id="info_translation" class="well">
+      <div class="info_header">
+      Значение
+      </div>      
            {{ kanji.meaning }}
+
       </div>
       <div id="info_on_readings" class="well">
+      <div class="info_header">
+      Онные чтения
+      </div>
            {% for r in on_readings %}
               <div>
                 {{ r.reading  }}
@@ -18,6 +25,10 @@
            {% endfor %}
       </div>
       <div id="info_kun_readings" class="well">
+      <div class="info_header">
+      Кунные чтения
+      </div>
+
            {% for r in kun_readings %}
               <div>
                 {{ r.reading  }}
@@ -27,6 +38,10 @@
 </span>
 <span class="span4">
       <div class="well">
+      <div class="info_header">
+      Ключ
+      </div>
+      <div id="info_key_wrapper">
            <span id="info_kanji_key_hieroglyph">
                 {{ kanji.key.key }}
            </span>
@@ -34,8 +49,13 @@
                 ({{ kanji.key.number }})
            </span>
       </div>
+      </div>
 
       <div class="well">
+      <div class="info_header">
+      Разное
+      </div>
+      
            <div>
                  <b> Уровень JLPT: </b> {{ kanji.jlpt_level }}
            </div>

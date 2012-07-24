@@ -27,6 +27,13 @@ body {
     outline: 0;
     }
 
+.kanji_list_element a:link, a:visited, a:active, a:hover{
+    color: #013435;
+    text-decoration: none;
+    outline: 0;
+    }
+
+
 .kanji_info_link{
     display: block;
     height: 200px;
@@ -169,11 +176,24 @@ div.kanji_info{
 
 #info_translation{
     font-size: 200%;
-    color: #A2B0A8;
+    color: #013435;
     text-align: center;
     }
 
 #info_kanji_key_hieroglyph{
     font-size: 30pt;
     line-height: normal;
+    }
+
+.info_header{
+    font-size: small;
+    color: #A5C0AA;
+    text-align: right;
+    position: relative;
+    top: -20px;
+    left: 15px;
+    }
+
+#info_key_wrapper{
+    text-align: center;
     }

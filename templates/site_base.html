@@ -10,7 +10,7 @@
     {% endblock %}
     <title>
         {% block page_title %}
-            JLS
+            Japanese Learning System
         {% endblock %}
     </title>
 </head>
@@ -19,7 +19,15 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="{% url mainpage %}">JLS</a>
+      <a class="brand" href="{% url mainpage %}">       
+      JLS
+      <!---
+      <div class="nav pull-right">
+           <img src="/static/karp.png" width="150"/>
+      </div>
+      --->
+
+      </a>
       <ul class="nav">
         <li><a href="{% url kanji_list 1 %}">Каталог иероглифов</a></li>
 
@@ -37,6 +45,9 @@
           {% endif %}
         </li>
       </ul>
+
+
+      
     </div>
   </div>
 </div>
@@ -68,7 +79,7 @@
 {% endblock %}
 </div>
 <footer class="footer">
-<p class="copyright pull-right">© Melevir, 2012</p>
+<p class="copyright pull-right">© Melevir&Sumireno, 2012</p>
 </footer>
 </div>
 

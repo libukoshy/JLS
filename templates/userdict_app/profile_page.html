@@ -29,7 +29,9 @@
 {% for kanji in dict %}
 <div class="kanji_list_element">
      <span class = "kanji_hieroglyph">
+     <a href="{% url kanji_info kanji.hieroglyph %}">
        {{ kanji.hieroglyph }}
+     </a>
      </span>
      <span class = "kanji_translation">
        {{ kanji.meaning }}
@@ -42,7 +44,9 @@
 {% for kanji in failed %}
 <div class="kanji_list_element">
      <span class = "kanji_hieroglyph">
+     <a href="{% url kanji_info kanji.hieroglyph %}">     
        {{ kanji.hieroglyph }}
+     </a>
      </span>
      <span class = "kanji_translation">
        {{ kanji.meaning }}
@@ -55,7 +59,9 @@
 {% for kanji in added %}
 <div class="kanji_list_element">
      <span class = "kanji_hieroglyph">
+     <a href="{% url kanji_info kanji.hieroglyph %}">     
        {{ kanji.hieroglyph }}
+     </a>
      </span>
      <span class = "kanji_translation">
        {{ kanji.meaning }}
@@ -82,16 +88,19 @@ $kanji_actions = $('.dict_kanji_actions');
         $('a[href="#dict_list"]').click();
 
         $('.kanji_list_element').mouseenter(function(){
+
             var pos = $(this).position();
             $kanji_actions.css({
                     position: "absolute",
                     top: (pos.top + $(this).height()/2 - $kanji_actions.height()/2 + 5) + "px",
                     left: ($(this).width() - 27) + "px"
-                    }).show();
+                    });
+            $kanji_actions.show()
             $(this).append($kanji_actions);
             var kanji = $.trim($(this).find('.kanji_hieroglyph').text());
             var $kanji_add_to_user_dict_input = $kanji_actions.find('input[name$=kanji]');
             $kanji_add_to_user_dict_input.val(kanji);
+
         });
 
         $('.kanji_list_element').mouseleave(function(){
